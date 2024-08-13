@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+  <meta http-equiv="CONTENT-TYPE" content="text/html; charset=UTF-8">
+  <title>cambio tema</title>
+  
+  <style>
+  
+    body {
+      background-color: white;
+    }
+  
+    #header {
+      background-color: red;
+      border-color: black;
+      box-shadow: 5px 5px black;
+      border-radius: 10px;
+      padding: 1em;
+       }
+      
+      #div {
+        background-color: red;
+        border-radius: 10px;
+        box-shadow: 5px 5px black;
+        padding: 1em;
+        color: black;
+      }
+  
+      button {
+        padding: 1em;
+        background-color: gold;
+      }
+      
+  </style>
+  
+</head>
+<body id="body">
+  
+  <header id="header">
+    <h1>Header #header</h1> 
+  </header>
+  
+  <br>
+  <br>
+  
+  <div id="div">
+    <h1>box #div</h1>
+  </div>
+  
+  <br>
+  <br>
+  
+  <button onclick="cambioTema()" id="button">Cambio tema</button>
+  
+  <script>
+  
+    function cambioTema() {
+      const div = document.getElementById('div');
+      const header = document.getElementById('header');
+      const body = document.getElementById('body');
+      const button = document.getElementById('button')
+      
+      const coloreDivCorrente = div.style.backgroundColor;
+      
+      if (coloreDivCorrente === 'red') {
+        div.style.backgroundColor = 'blue';
+        div.style.color = 'white';
+        header.style.backgroundColor = 'blue';
+        header.style.color = 'white';
+        body.style.backgroundColor = '#676767';
+        button.style.backgroundColor = 'silver';
+      } else {
+        div.style.backgroundColor = 'red';
+        div.style.color = 'black';
+        header.style.backgroundColor = 'red';
+        header.style.color = 'black';
+        body.style.backgroundColor = 'white';
+        button.style.backgroundColor = 'gold';è
+      }
+    }
+  
+  </script>
+  
+</body>
+</html>
